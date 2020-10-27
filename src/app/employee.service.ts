@@ -13,10 +13,6 @@ export class EmployeeService {
     localStorage.setItem('data', JSON.stringify(obj));
   }
 
-  setInitial() {
-    localStorage.setItem('data', JSON.stringify([]));
-  }
-
   get() {
     const data = JSON.parse(localStorage.getItem('data'));
     return data;
