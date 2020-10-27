@@ -1,0 +1,90 @@
+.form {
+  background-color: #fefefe;
+  -webkit-box-shadow: 2px 2px 5px #21212122;
+          box-shadow: 2px 2px 5px #21212122;
+  height: 35rem;
+  width: 25rem;
+  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 3px;
+}
+
+@media (max-width: 430px) {
+  .form {
+    width: 90%;
+  }
+}
+
+.form__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1.25rem;
+}
+
+.form__input input {
+  border: 2px solid #212121;
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+}
+
+.form__input input.invalid {
+  border: 2px solid red;
+}
+
+.form__submit {
+  width: 50%;
+  margin: 0 auto;
+  font-size: 1.25rem;
+  border: 2px solid #0881a3;
+  border-radius: 10px;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.form__submit:hover {
+  background-color: #0881a3;
+  color: #fefefe;
+}
+
+.form__submit:disabled {
+  pointer-events: none;
+  border: 2px solid #0881a344;
+}
+
+.form__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 92vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form__heading {
+  margin-bottom: 1rem;
+}
+/*# sourceMappingURL=employee-registeration.component.css.map */

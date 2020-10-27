@@ -1,0 +1,75 @@
+.card-container {
+  display: grid;
+  grid-gap: 2rem;
+  padding: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 0.2fr));
+  justify-content: center;
+  position: relative;
+}
+
+@media (max-width: 350px) {
+  .card-container {
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 0.2fr));
+  }
+}
+
+.delete-btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  /* font-weight: bold; */
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.emp_heading {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 2;
+}
+
+.avatar {
+  background: url("../../assets/avator.png");
+}
+
+.card__footer {
+  /* background-color: red; */
+  padding: 0.35rem 2rem;
+  font-size: 0.85rem;
+  margin-bottom: 0.15rem;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.card__content {
+  padding: 0.35rem;
+}
+
+.date__text {
+  color: #0881a3;
+}
+
+.search__container {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+.search {
+  box-shadow: 2px 2px 5px #21212122;
+  padding: 0.25rem;
+  font-size: 1.25rem;
+}
+
+.message__link {
+  text-decoration: underline;
+  color: blue;
+  margin-left: 0.3rem;
+}
+
+.message {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 5rem;
+}

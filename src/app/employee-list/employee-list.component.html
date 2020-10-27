@@ -1,0 +1,20 @@
+<h1 class="emp_heading" >Employees</h1>
+
+<div *ngIf="employees.length>=1" class="search__container">
+  <input placeholder="Search" class="search" [(ngModel)]="search" (ngModelChange)="handleChange($event)" type="text">
+</div>
+
+<div *ngIf="employees.length<1" class="message">No Employees added , Add <a class="message__link" routerLink="/new"> here</a> </div>
+
+<div class="card-container">
+<mat-card  *ngFor="let emp of employees">
+  <span class="delete-btn" (click)="handleDelete(emp.id)"><i class="fas fa-times"></i></span>
+    <mat-card-header>
+        <div class="avatar" mat-card-avatar></div>
+<mat-card-title>{{emp.name}}</mat-card-title>
+  <mat-card-subtitle>{{emp.position}}</mat-card-subtitle>
+</mat-card-header>
+  <mat-card-content class="card__content" >{{emp.about}}</mat-card-content>
+  <mat-card-footer class="card__footer" > <span class="date__text" >JOINING DATE:</span> {{emp.joiningDate | dateFormat}}</mat-card-footer>
+</mat-card>
+</div>

@@ -1,0 +1,29 @@
+
+<div class="form__container">
+    <h1 class="form__heading" >Add an Employee</h1>
+<form [formGroup]="form" class="form" (submit)="handleSubmit()" >
+
+    <div class="form__input">
+        <label for="name">Name:</label>
+        <input [placeholder]="setPlaceholder(name)" id="name" [class.invalid]="name.invalid  && name.dirty" type="text" formControlName="name" >
+    </div>
+
+    <div class="form__input">
+        <label for="position">Postition:</label>
+        <input [placeholder]="setPlaceholder(position)" id="position" [class.invalid]="position.invalid  && position.dirty" type="text" formControlName="position" >
+    </div>
+    
+    <div class="form__input">
+        <label for="about">About:</label>
+        <input [placeholder]="setPlaceholder(about)" id="about" [class.invalid]="about.invalid && about.dirty" formControlName="about" >
+    </div>
+
+    <div class="form__input">
+        <label for="joiningDate">Joining Date:</label>
+        <input [placeholder]="setPlaceholder(joiningDate)" id="joiningDate" [class.invalid]="joiningDate.invalid  && joiningDate.dirty" type="date" formControlName="joiningDate" >
+    </div>
+
+    <button [disabled]="!this.form.valid" type="submit" class="form__submit">Add</button>
+
+</form>
+</div>
