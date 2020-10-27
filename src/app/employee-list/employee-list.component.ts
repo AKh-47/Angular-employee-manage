@@ -13,7 +13,7 @@ export class EmployeeListComponent implements OnInit {
 
   ngOnInit(): void {
     this.employees = this.emp.get();
-    console.log(this.employees);
+    this.emp.setInitial();
   }
 
   handleDelete(id) {
