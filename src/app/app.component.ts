@@ -9,6 +9,9 @@ export class AppComponent implements OnInit {
   title = 'employee';
 
   ngOnInit(): void {
-    localStorage.setItem('data', JSON.stringify([]));
+    const data = JSON.parse(localStorage.getItem('data'));
+    if (!data) {
+      localStorage.setItem('data', JSON.stringify([]));
+    }
   }
 }
