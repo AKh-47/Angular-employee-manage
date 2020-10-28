@@ -1,6 +1,6 @@
 .app__nav {
   background-color: #fefefe;
-  min-height: 8vh;
+  height: 8vh;
   -webkit-box-shadow: 2px 2px 5px #21212122;
   box-shadow: 2px 2px 5px #21212122;
   display: -webkit-box;
@@ -13,6 +13,68 @@
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 0 3rem;
+  position: relative;
+  z-index: 2000;
+}
+
+.app__nav-mobile {
+  position: absolute;
+  content: "";
+  height: 8vh;
+  width: 100%;
+  top: 8vh;
+  left: 0;
+  background-color: #fefefe;
+  transition: 0.5s all;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1.5rem;
+  transform: translateY(-100%);
+  /* z-index: -1; */
+}
+
+.app__nav-btn-mobile {
+  font-size: 1.5rem;
+  height: 4vh;
+  width: 100%;
+}
+
+.hamburger__line {
+  background-color: #0881a3;
+  height: 0.35rem;
+  width: 2rem;
+  display: none;
+  position: relative;
+}
+
+.hamburger__line::before {
+  background-color: #0881a3;
+  content: "";
+  position: absolute;
+  height: 0.35rem;
+  width: 2rem;
+  top: 0.75rem;
+}
+
+.hamburger__line::after {
+  background-color: #0881a3;
+  content: "";
+  position: absolute;
+  height: 0.35rem;
+  width: 2rem;
+  top: -0.75rem;
+}
+
+.app__nav-link-mobile {
+  color: #212121;
+  width: 100%;
+}
+
+.app__nav-link--active-mobile {
+  background-color: #0881a3;
+  color: #fefefe;
+  width: 100%;
 }
 
 @media (max-width: 680px) {
@@ -20,10 +82,18 @@
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    flex-direction: column;
+    /* flex-direction: column; */
     padding: 1rem;
-    height: 12vh;
+    /* height: 12vh; */
   }
+}
+
+.hamburger {
+  display: none;
+}
+
+.hamburger:checked + .app__nav-mobile {
+  transform: translateY(0);
 }
 
 .app__nav-heading {
@@ -48,15 +118,25 @@
   justify-content: space-around;
 }
 
+@media (max-width: 1430px) {
+  .app__nav-links {
+    width: 30%;
+  }
+}
+
 @media (max-width: 56.25em) {
   .app__nav-links {
     width: 30%;
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 880px) {
   .app__nav-links {
-    width: 50%;
+    display: none;
+  }
+
+  .hamburger__line {
+    display: block;
   }
 }
 
