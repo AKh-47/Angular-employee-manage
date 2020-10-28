@@ -17,7 +17,15 @@ export class EmployeeListComponent implements OnInit {
   }
 
   handleDelete(id) {
-    const check = confirm('Are you sure?');
+    let name: string;
+
+    this.employees.forEach((emp: any) => {
+      if (emp.id === id) {
+        name = emp.name;
+      }
+    });
+
+    const check = confirm(`Are you sure you want to delete ${name}?`);
     if (check) {
       this.emp.delete(id);
       this.employees = this.emp.get();
