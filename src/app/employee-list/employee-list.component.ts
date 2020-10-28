@@ -1,3 +1,4 @@
+import { EmbeddedTemplateAst } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from '../employee.service';
 
@@ -16,9 +17,12 @@ export class EmployeeListComponent implements OnInit {
   }
 
   handleDelete(id) {
-    this.emp.delete(id);
-    this.employees = this.emp.get();
-    this.search = '';
+    const check = confirm('Are you sure?');
+    if (check) {
+      this.emp.delete(id);
+      this.employees = this.emp.get();
+      this.search = '';
+    }
   }
 
   handleChange(searchValue) {
