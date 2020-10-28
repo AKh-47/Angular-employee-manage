@@ -14,4 +14,9 @@ export class AppComponent implements OnInit {
       localStorage.setItem('data', JSON.stringify([]));
     }
   }
+
+  handleClick(checkbox) {
+    checkbox.checked = false;
+    console.log(checkbox.checked);
+  }
 }

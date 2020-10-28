@@ -6,17 +6,17 @@
 </nav>
 
 
-  <label  for="nav">
+  <label class="hamburger__label"  for="nav">
     <div class="hamburger__line"></div>
   </label>
   
 
 </header>
 
-<input class="hamburger" type="checkbox" name="nav" id="nav">
+<input #checkbox class="hamburger" type="checkbox" name="nav" id="nav">
 <nav class="app__nav-mobile">
-    <button class="app__nav-btn-mobile"><a class="app__nav-link-mobile" routerLink="/new" routerLinkActive="app__nav-link--active-mobile" >Add +</a></button>
-    <button class="app__nav-btn-mobile"> <a class="app__nav-link-mobile" routerLink="/list" routerLinkActive="test" routerLinkActive="app__nav-link--active-mobile" >View all</a></button>
+    <a (click)="handleClick(checkbox)" class="app__nav-link-mobile" routerLink="/new" routerLinkActive="app__nav-link--active-mobile" >Add +</a>
+    <a (click)="handleClick(checkbox)" class="app__nav-link-mobile" routerLink="/list" routerLinkActive="test" routerLinkActive="app__nav-link--active-mobile" >View all</a>
 </nav>
 
 
