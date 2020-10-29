@@ -13,6 +13,12 @@
   }
 }
 
+@media (max-width: 281px) {
+  .card-container {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 0.2fr));
+  }
+}
+
 .delete-btn {
   position: absolute;
   right: 1rem;

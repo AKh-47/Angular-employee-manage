@@ -40,7 +40,7 @@
 }
 
 .app__nav-btn-mobile {
-  background-color: red;
+  /* background-color: red; */
 }
 
 .app__nav-link-mobile {
@@ -173,3 +173,21 @@
   border-bottom: 2px solid #0881a3;
 }
 /*# sourceMappingURL=app.component.css.map */
+
+@media (max-width: 442px) {
+  .app__nav-heading {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 324px) {
+  .app__nav-heading {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 268px) {
+  .app__nav-heading {
+    font-size: 1rem;
+  }
+}
